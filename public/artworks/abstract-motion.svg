@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" role="img" aria-label="Abstract Motion placeholder">
+  <rect width="900" height="1400" fill="#2C3530"/>
+  <style>
+    .am { animation: rise 10s ease-in-out infinite; }
+    .am2 { animation: rise 14s ease-in-out infinite reverse; }
+    @keyframes rise { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-40px); } }
+    @media (prefers-reduced-motion: reduce) { .am, .am2 { animation: none; } }
+  </style>
+  <g class="am">
+    <ellipse cx="450" cy="900" rx="180" ry="320" fill="#C9D7C2" opacity="0.35"/>
+  </g>
+  <g class="am2">
+    <ellipse cx="430" cy="640" rx="120" ry="260" fill="#C4A35A" opacity="0.4"/>
+  </g>
+  <ellipse cx="470" cy="420" rx="80" ry="180" fill="#D7E6EF" opacity="0.45"/>
+  <ellipse cx="450" cy="240" rx="40" ry="90" fill="#F6F1E7" opacity="0.7"/>
+</svg>

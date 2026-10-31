@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-label="Organic Forms placeholder">
+  <rect width="1200" height="1200" fill="#E8F0EA"/>
+  <style>
+    .og { transform-origin: 600px 600px; animation: spin 18s linear infinite; }
+    .og2 { transform-origin: 600px 620px; animation: spin 26s linear infinite reverse; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .og, .og2 { animation: none; } }
+  </style>
+  <ellipse class="og" cx="600" cy="600" rx="280" ry="360" fill="#9BB8A8" opacity="0.7"/>
+  <ellipse class="og2" cx="620" cy="580" rx="220" ry="300" fill="#C4A35A" opacity="0.35"/>
+  <ellipse cx="600" cy="600" rx="120" ry="160" fill="#F6F1E7" opacity="0.8"/>
+  <ellipse cx="560" cy="540" rx="40" ry="70" fill="#D7E6EF" opacity="0.9"/>
+</svg>

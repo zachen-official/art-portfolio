@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Refractions placeholder">
+  <rect width="1600" height="1000" fill="#D7E6EF"/>
+  <style>
+    .rf { animation: shift 14s ease-in-out infinite; }
+    .rf2 { animation: shift 18s ease-in-out infinite reverse; }
+    @keyframes shift { 0%,100% { transform: translate(0,0); opacity: 0.7; } 50% { transform: translate(24px,-18px); opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .rf, .rf2 { animation: none; } }
+  </style>
+  <g class="rf">
+    <polygon points="120,180 540,80 720,520 180,640" fill="#F6F1E7" opacity="0.7"/>
+    <polygon points="200,420 980,300 1100,920 80,860" fill="#C4A35A" opacity="0.28"/>
+  </g>
+  <g class="rf2">
+    <polygon points="620,120 1280,60 1420,700 700,780" fill="#C9D7C2" opacity="0.55"/>
+    <polygon points="900,200 1580,340 1400,980 760,820" fill="#C48B7A" opacity="0.22"/>
+  </g>
+</svg>

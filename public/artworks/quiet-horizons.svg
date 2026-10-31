@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Quiet Horizons placeholder">
+  <defs>
+    <linearGradient id="qh-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4E2C5"/>
+      <stop offset="38%" stop-color="#D7E6EF"/>
+      <stop offset="72%" stop-color="#A9C4B0"/>
+      <stop offset="100%" stop-color="#7F9B86"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#qh-sky)"/>
+  <ellipse cx="1180" cy="220" rx="90" ry="90" fill="#F7E7C3" opacity="0.85"/>
+  <ellipse cx="1180" cy="220" rx="140" ry="140" fill="#F7E7C3" opacity="0.18"/>
+  <path d="M0 430 C 280 390, 420 470, 640 430 C 900 380, 1100 460, 1600 400 L 1600 1000 L 0 1000 Z" fill="#C9D7C2" opacity="0.7"/>
+  <path d="M0 560 C 220 520, 480 600, 760 540 C 1040 480, 1280 580, 1600 520 L 1600 1000 L 0 1000 Z" fill="#8FA88A"/>
+  <path d="M0 720 C 300 680, 520 760, 820 710 C 1120 660, 1360 740, 1600 700 L 1600 1000 L 0 1000 Z" fill="#5E7462"/>
+  <path d="M0 860 C 400 840, 800 900, 1600 850 L 1600 1000 L 0 1000 Z" fill="#3F5346"/>
+</svg>

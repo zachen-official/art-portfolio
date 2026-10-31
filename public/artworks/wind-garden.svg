@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-label="Wind Garden placeholder">
+  <rect width="1200" height="1200" fill="#DCE8D8"/>
+  <style>
+    .wg { transform-origin: center bottom; animation: sway 6s ease-in-out infinite; }
+    @keyframes sway { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(4deg); } }
+    @media (prefers-reduced-motion: reduce) { .wg { animation: none; } }
+  </style>
+  <circle cx="900" cy="220" r="70" fill="#F6F1E7"/>
+  <g class="wg">
+    <ellipse cx="420" cy="780" rx="40" ry="260" fill="#6E8B6E"/>
+    <ellipse cx="560" cy="740" rx="50" ry="300" fill="#8FA88A"/>
+    <ellipse cx="700" cy="800" rx="36" ry="240" fill="#5E7462"/>
+    <ellipse cx="840" cy="760" rx="44" ry="280" fill="#A3B89A"/>
+  </g>
+  <path d="M0 980 C 300 940, 700 1020, 1200 960 L 1200 1200 L 0 1200 Z" fill="#4E6554"/>
+</svg>

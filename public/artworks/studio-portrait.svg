@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Studio portrait placeholder">
+  <rect width="800" height="1000" fill="#E7E0D4"/>
+  <rect x="0" y="620" width="800" height="380" fill="#C9D7C2"/>
+  <circle cx="400" cy="390" r="140" fill="#C48B7A" opacity="0.55"/>
+  <path d="M220 980 C 240 700, 560 700, 580 980 Z" fill="#5E7462"/>
+  <rect x="40" y="40" width="720" height="920" fill="none" stroke="#C4A35A" stroke-width="1" opacity="0.4"/>
+</svg>

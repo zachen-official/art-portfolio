@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Still Current placeholder">
+  <rect width="1600" height="900" fill="#8FB0B8"/>
+  <style>
+    .sc { animation: wave 9s ease-in-out infinite; }
+    @keyframes wave { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-40px); } }
+    @media (prefers-reduced-motion: reduce) { .sc { animation: none; } }
+  </style>
+  <g class="sc">
+    <path d="M-80 280 C 200 220, 480 340, 760 260 C 1040 180, 1320 300, 1680 240 L 1680 900 L -80 900 Z" fill="#D7E6EF" opacity="0.55"/>
+    <path d="M-80 480 C 240 420, 520 540, 840 460 C 1160 380, 1400 520, 1680 460 L 1680 900 L -80 900 Z" fill="#5E8A90" opacity="0.55"/>
+    <path d="M-80 680 C 280 640, 640 740, 1680 660 L 1680 900 L -80 900 Z" fill="#2C4A50" opacity="0.7"/>
+  </g>
+</svg>

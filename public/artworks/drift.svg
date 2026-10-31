@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" role="img" aria-label="Drift placeholder">
+  <rect width="900" height="1400" fill="#D7E6EF"/>
+  <style>
+    .dr { animation: float 12s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translate(0,0); } 50% { transform: translate(16px,-28px); } }
+    @media (prefers-reduced-motion: reduce) { .dr { animation: none; } }
+  </style>
+  <g class="dr">
+    <ellipse cx="450" cy="520" rx="260" ry="140" fill="#F6F1E7" opacity="0.9"/>
+    <ellipse cx="500" cy="680" rx="220" ry="110" fill="#C9D7C2" opacity="0.7"/>
+    <ellipse cx="380" cy="840" rx="180" ry="90" fill="#ffffff" opacity="0.55"/>
+  </g>
+</svg>

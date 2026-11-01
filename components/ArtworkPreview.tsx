@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { Artwork } from "@/data/artworks";
+import { assetPath } from "@/lib/paths";
 
 export function ArtworkPreview({
   artwork,
@@ -30,8 +31,8 @@ export function ArtworkPreview({
   if (artwork.video) {
     return (
       <video
-        src={artwork.video}
-        poster={artwork.image}
+        src={assetPath(artwork.video)}
+        poster={assetPath(artwork.image)}
         muted
         loop
         playsInline
@@ -50,7 +51,7 @@ export function ArtworkPreview({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={artwork.image}
+          src={assetPath(artwork.image)}
           alt={artwork.title}
           className={`h-full w-full object-cover ${reduceMotion ? "" : "digital-loop"}`}
         />
@@ -61,7 +62,7 @@ export function ArtworkPreview({
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={artwork.image}
+      src={assetPath(artwork.image)}
       alt={artwork.title}
       className={`h-auto w-full ${className}`}
     />

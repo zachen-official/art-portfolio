@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1400" role="img" aria-label="The Last Light placeholder">
   <defs>
     <linearGradient id="ll-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3E4A5A"/>
+      <stop offset="0%" stop-color="#2C3530"/>
       <stop offset="42%" stop-color="#C48B7A"/>
-      <stop offset="68%" stop-color="#E8C58A"/>
-      <stop offset="100%" stop-color="#4E5E4C"/>
+      <stop offset="68%" stop-color="#C4A35A"/>
+      <stop offset="100%" stop-color="#5E7462"/>
     </linearGradient>
   </defs>
   <rect width="1000" height="1400" fill="url(#ll-sky)"/>
-  <circle cx="500" cy="720" r="110" fill="#F3D9A0" opacity="0.95"/>
+  <circle cx="500" cy="720" r="110" fill="#C4A35A" opacity="0.95"/>
   <path d="M0 900 L 140 780 L 220 860 L 340 700 L 430 820 L 560 640 L 690 800 L 820 680 L 1000 860 L 1000 1400 L 0 1400 Z" fill="#2C3530"/>
-  <path d="M0 1120 C 250 1080, 520 1180, 1000 1100 L 1000 1400 L 0 1400 Z" fill="#1E2622"/>
+  <path d="M0 1120 C 250 1080, 520 1180, 1000 1100 L 1000 1400 L 0 1400 Z" fill="#4E6554"/>
 </svg>

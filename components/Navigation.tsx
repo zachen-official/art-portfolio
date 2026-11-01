@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { SITE } from "@/data/site";
 
-const links = [
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/#contact", label: "Contact" },
-];
-
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const links = [
+    { href: "/work", label: "Work" },
+    { href: "/about", label: "About" },
+    { href: "#contact", label: "Contact" },
+    { href: "/store", label: "Store" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -33,7 +33,7 @@ export function Navigation() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-[background-color,backdrop-filter,border-color] duration-500 ${
         scrolled || open
-          ? "border-b border-gold/25 bg-paper/88 backdrop-blur-md"
+          ? "border-b border-gold/35 bg-paper/85 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -46,7 +46,7 @@ export function Navigation() {
           {SITE.name}
         </Link>
 
-        <ul className="hidden items-center gap-10 text-[11px] uppercase tracking-[0.22em] md:flex">
+        <ul className="hidden items-center gap-8 text-[11px] uppercase tracking-[0.22em] md:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -71,8 +71,8 @@ export function Navigation() {
       </nav>
 
       <div
-        className={`overflow-hidden border-t border-gold/20 bg-paper/95 transition-[max-height,opacity] duration-500 md:hidden ${
-          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden border-t border-gold/20 bg-mist/95 transition-[max-height,opacity] duration-500 md:hidden ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <ul className="flex flex-col gap-6 px-6 py-8 text-[12px] uppercase tracking-[0.22em]">

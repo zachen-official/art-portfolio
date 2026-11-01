@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "About",
@@ -12,7 +13,7 @@ export default function AboutPage() {
         <div className="md:col-span-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/artworks/studio-portrait.svg"
+            src={assetPath("/artworks/studio-portrait.svg")}
             alt="Studio portrait placeholder"
             className="w-full"
           />
@@ -21,24 +22,20 @@ export default function AboutPage() {
           <p className="text-[11px] uppercase tracking-[0.28em] text-forest/50">
             {SITE.name}
           </p>
-          <h1 className="mt-4 font-serif text-5xl leading-tight">About the studio</h1>
+          <h1 className="mt-4 font-serif text-5xl leading-tight">The studio</h1>
           <div className="mt-8 space-y-6 text-base leading-8 text-forest/75">
             <p>
-              Exploring the relationship between physical and digital mediums, this
-              collection brings together traditional painting, digital sculpture,
-              and experimental visual forms. Each work represents a different
-              exploration of atmosphere, material, movement, and imagination.
+              This practice sits between two temperatures. One is bubbly and
+              handmade — Ghibli-like weather, moss interiors, and oil landscapes
+              finished slowly.
             </p>
             <p>
-              Oil paintings begin outdoors or from remembered weather—valleys,
-              last light, moss interiors—and are finished slowly in the studio.
-              Digital works grow from the same questions of form and air, using
-              sculpture, animation, and light as another kind of pigment.
+              The other is built for games: spell-witches, creatures, and
+              cinematic character work. Digital sculpture, animation, and
+              material studies live there — darker, jeweled, meant to be inhabited.
             </p>
             <p>
-              The gallery is intentionally quiet. Works are shown at their own
-              scale, whether a looping study or a landscape on canvas. Inquiries
-              for available pieces and commissions are welcome.
+              Inquiries for available pieces and commissions are welcome.
             </p>
           </div>
         </div>

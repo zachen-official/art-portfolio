@@ -18,7 +18,7 @@ export function ArtworkCard({
     <article className={artworkSpanClass(artwork, index)}>
       <Link href={`/work/${artwork.slug}`} className="group block">
         <figure>
-          <div className="overflow-hidden bg-moss/30">
+          <div className="overflow-hidden bg-mist">
             <div className="transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.02]">
               <ArtworkPreview artwork={artwork} />
             </div>

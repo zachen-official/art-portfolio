@@ -1,12 +1,11 @@
 "use client";
 
-export type WorkFilter = "all" | "digital" | "oil" | "collections";
+export type WorkFilter = "digital" | "oil" | "game";
 
 const FILTERS: { id: WorkFilter; label: string }[] = [
-  { id: "all", label: "All Work" },
   { id: "digital", label: "Digital & Animation" },
   { id: "oil", label: "Oil & Canvas" },
-  { id: "collections", label: "Collections" },
+  { id: "game", label: "Game Design" },
 ];
 
 export function FilterBar({
@@ -29,8 +28,8 @@ export function FilterBar({
             onClick={() => onChange(filter.id)}
             className={`text-[11px] uppercase tracking-[0.2em] transition-colors duration-300 ${
               active
-                ? "text-forest underline decoration-gold/70 underline-offset-8"
-                : "text-forest/45 hover:text-forest/75"
+                ? "text-forest underline decoration-gold underline-offset-8"
+                : "text-lilac hover:text-iris"
             }`}
           >
             {filter.label}

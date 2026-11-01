@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Valley Haze placeholder">
-  <rect width="1600" height="1000" fill="#E4EEE8"/>
+  <rect width="1600" height="1000" fill="#D7E6EF"/>
   <ellipse cx="800" cy="280" rx="420" ry="80" fill="#F6F1E7" opacity="0.8"/>
   <path d="M0 380 C 400 300, 700 420, 1100 340 C 1400 280, 1500 360, 1600 320 L 1600 1000 L 0 1000 Z" fill="#C9D7C2"/>
-  <path d="M0 620 C 350 560, 800 680, 1600 580 L 1600 1000 L 0 1000 Z" fill="#7E9A84"/>
-  <path d="M0 820 C 500 780, 900 860, 1600 800 L 1600 1000 L 0 1000 Z" fill="#4E6554"/>
+  <path d="M0 620 C 350 560, 800 680, 1600 580 L 1600 1000 L 0 1000 Z" fill="#C9D7C2"/>
+  <path d="M0 820 C 500 780, 900 860, 1600 800 L 1600 1000 L 0 1000 Z" fill="#5E7462"/>
 </svg>

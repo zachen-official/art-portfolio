@@ -37,12 +37,12 @@ export function ArtworkPreview({
         playsInline
         autoPlay={!reduceMotion}
         controls={false}
-        className={`h-auto w-full bg-forest/10 ${className}`}
+        className={`h-auto w-full bg-mist ${className}`}
       />
     );
   }
 
-  if (artwork.category === "digital") {
+  if (artwork.category !== "oil") {
     return (
       <div
         className={`relative w-full overflow-hidden ${className}`}

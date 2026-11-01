@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Figtree, Fraunces } from "next/font/google";
-import { Footer } from "@/components/Footer";
-import { Navigation } from "@/components/Navigation";
+import { SiteChrome, SiteShell } from "@/components/SiteShell";
 import { SITE } from "@/data/site";
 import "./globals.css";
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s · ${SITE.name}`,
   },
   description:
-    "A collection of digital explorations, animated forms, and traditional landscape paintings.",
+    "Paintings, motion studies, and cinematic game design from a single studio.",
 };
 
 export default function RootLayout({
@@ -34,11 +34,10 @@ export default function RootLayout({
       lang="en"
       className={`${figtree.variable} ${fraunces.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-paper text-forest">
-        <div className="grain" aria-hidden="true" />
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="world-game min-h-full">
+        <Suspense fallback={<SiteChrome>{children}</SiteChrome>}>
+          <SiteShell>{children}</SiteShell>
+        </Suspense>
       </body>
     </html>
   );

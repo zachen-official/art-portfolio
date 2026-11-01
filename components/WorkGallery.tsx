@@ -1,52 +1,51 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Artwork } from "@/data/artworks";
 import { ArtworkGallery } from "@/components/ArtworkGallery";
 import { FilterBar, type WorkFilter } from "@/components/FilterBar";
 
 function parseFilter(value: string | null): WorkFilter {
-  if (value === "digital" || value === "oil" || value === "collections") {
+  if (value === "digital" || value === "oil" || value === "game") {
     return value;
   }
-  return "all";
+  return "digital";
 }
 
 function applyFilter(artworks: Artwork[], filter: WorkFilter) {
-  if (filter === "digital") return artworks.filter((item) => item.category === "digital");
-  if (filter === "oil") return artworks.filter((item) => item.category === "oil");
-  if (filter === "collections") return artworks.filter((item) => Boolean(item.collection));
-  return artworks;
+  return artworks.filter((item) => item.category === filter);
 }
 
 export function WorkGallery({ artworks }: { artworks: Artwork[] }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  const [filter, setFilter] = useState<WorkFilter>(() => parseFilter(searchParams.get("category")));
+  const [filter, setFilter] = useState<WorkFilter>(() =>
+    parseFilter(searchParams.get("category")),
+  );
+
+  useEffect(() => {
+    if (searchParams.get("category") === "store") {
+      router.replace("/store");
+      return;
+    }
+    setFilter(parseFilter(searchParams.get("category")));
+  }, [searchParams, router]);
 
   const visible = useMemo(() => applyFilter(artworks, filter), [artworks, filter]);
 
   function updateFilter(next: WorkFilter) {
     setFilter(next);
     const params = new URLSearchParams(searchParams.toString());
-    if (next === "all") {
-      params.delete("category");
-    } else {
-      params.set("category", next);
-    }
-    const query = params.toString();
-    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    params.set("category", next);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
   return (
     <div>
       <FilterBar value={filter} onChange={updateFilter} />
-      <div
-        key={filter}
-        className="motion-cloud mt-14 transition-opacity duration-500"
-      >
+      <div key={filter} className="motion-cloud mt-14 transition-opacity duration-500">
         <ArtworkGallery artworks={visible} showMeta />
         {visible.length === 0 ? (
           <p className="text-sm text-forest/60">No works in this view yet.</p>

@@ -11,7 +11,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/work"
-          className="mt-10 inline-block text-[11px] uppercase tracking-[0.22em] underline decoration-gold/60 underline-offset-8"
+          className="mt-10 inline-block text-[11px] uppercase tracking-[0.22em] text-iris underline decoration-gold underline-offset-8"
         >
           View all work
         </Link>

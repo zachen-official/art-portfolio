@@ -1,4 +1,4 @@
-export type ArtworkCategory = "digital" | "oil";
+export type ArtworkCategory = "digital" | "oil" | "game";
 export type ArtworkStatus = "available" | "sold" | "archived";
 export type ArtworkOrientation = "portrait" | "landscape" | "square";
 
@@ -44,7 +44,7 @@ export const artworks: Artwork[] = [
     year: 2025,
     medium: "Digital / 3D Animation",
     technique: "Procedural sculpture with looping light study",
-    category: "digital",
+    category: "game",
     collection: "Motion Studies",
     orientation: "square",
     status: "available",
@@ -76,7 +76,7 @@ export const artworks: Artwork[] = [
     year: 2025,
     medium: "Digital Artwork",
     technique: "Abstract light modeling and layered transparency",
-    category: "digital",
+    category: "game",
     orientation: "landscape",
     status: "available",
     description:
@@ -216,4 +216,10 @@ export function getFeaturedArtworks() {
 
 export function getArtworkSlugs() {
   return artworks.map((artwork) => artwork.slug);
+}
+
+export function categoryLabel(category: ArtworkCategory) {
+  if (category === "oil") return "Oil & Canvas";
+  if (category === "game") return "Game Design";
+  return "Digital & Animation";
 }

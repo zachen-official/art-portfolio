@@ -1,27 +1,72 @@
 @import "tailwindcss";
 
-:root {
+:root,
+.world-game {
+  --navy: #0b0b0d;
+  --mist: #14161a;
+  --paper: #0b0b0d;
+  --lilac: #9aa3b2;
+  --gold: #c6a15b;
+  --cream: #14161a;
+  --clay: #7a1f24;
+  --grove: #0d3a32;
+  --sea: #1f8a72;
+  --iris: #1f8a72;
+  --deep: #071412;
+  --blush: #12352e;
+  --forest: #e8e2d6;
+  --sky: var(--mist);
+  --moss: var(--sea);
+}
+
+.world-studio {
+  --navy: #2c3530;
+  --mist: #d7e6ef;
   --paper: #f6f1e7;
-  --sky: #d7e6ef;
-  --moss: #c9d7c2;
-  --forest: #2c3530;
+  --lilac: #8a9a92;
   --gold: #c4a35a;
+  --cream: #efe8d8;
   --clay: #c48b7a;
+  --grove: #5e7462;
+  --sea: #c9d7c2;
+  --iris: #5e7462;
+  --deep: #2c3530;
+  --blush: #e7efe4;
+  --forest: #2c3530;
+  --sky: var(--mist);
+  --moss: var(--sea);
 }
 
 @theme inline {
+  --color-navy: var(--navy);
+  --color-mist: var(--mist);
   --color-paper: var(--paper);
+  --color-lilac: var(--lilac);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-clay: var(--clay);
+  --color-grove: var(--grove);
+  --color-sea: var(--sea);
+  --color-iris: var(--iris);
+  --color-deep: var(--deep);
+  --color-blush: var(--blush);
+  --color-forest: var(--forest);
   --color-sky: var(--sky);
   --color-moss: var(--moss);
-  --color-forest: var(--forest);
-  --color-gold: var(--gold);
-  --color-clay: var(--clay);
   --font-sans: var(--font-figtree);
   --font-serif: var(--font-fraunces);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.world-game {
+  color-scheme: dark;
+}
+
+.world-studio {
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -43,26 +88,39 @@ body {
   font-family: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 }
 
+.world-studio,
+.world-game {
+  background-color: var(--paper);
+  color: var(--forest);
+}
+
 .grain {
   pointer-events: none;
   position: fixed;
   inset: 0;
   z-index: 80;
   opacity: 0.07;
-  mix-blend-mode: multiply;
+  mix-blend-mode: soft-light;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 
+.world-studio .grain {
+  mix-blend-mode: multiply;
+}
+
 .sky-wash {
-  background: linear-gradient(
-    180deg,
-    #eaf3f6 0%,
-    #f6f1e7 38%,
-    #f6f1e7 100%
-  );
+  background: linear-gradient(180deg, #050806 0%, #071412 42%, #0b0b0d 100%);
+}
+
+.world-studio .sky-wash {
+  background: linear-gradient(180deg, #eaf3f6 0%, #f6f1e7 38%, #f6f1e7 100%);
 }
 
 .moss-wash {
+  background: linear-gradient(180deg, #0b0b0d 0%, #12352e 55%, #071412 100%);
+}
+
+.world-studio .moss-wash {
   background: linear-gradient(180deg, #f6f1e7 0%, #e7efe4 100%);
 }
 
@@ -93,19 +151,19 @@ body {
 }
 
 .hero-enter {
-  animation: cloud-in 1.15s ease-out;
+  animation: cloud-in 1.15s ease-out both;
 }
 
 .hero-enter-delay {
-  animation: cloud-in 1.3s ease-out 0.12s;
+  animation: cloud-in 1.3s ease-out 0.12s both;
 }
 
 .hero-enter-media {
-  animation: cloud-in 1.4s ease-out 0.2s;
+  animation: cloud-in 1.4s ease-out 0.2s both;
 }
 
 .page-enter {
-  animation: cloud-in 0.7s ease-out;
+  animation: cloud-in 0.7s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {

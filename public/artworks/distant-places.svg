@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Distant Places placeholder">
   <defs>
     <linearGradient id="dp-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#E7F0F5"/>
+      <stop offset="0%" stop-color="#D7E6EF"/>
       <stop offset="100%" stop-color="#C9D7C2"/>
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#dp-sky)"/>
-  <path d="M0 420 C 200 360, 360 400, 520 340 C 700 270, 820 330, 980 280 C 1160 220, 1320 300, 1600 240 L 1600 900 L 0 900 Z" fill="#B7C9C4"/>
-  <path d="M0 560 C 260 500, 480 580, 760 520 C 1040 460, 1260 540, 1600 500 L 1600 900 L 0 900 Z" fill="#8FA39A"/>
-  <path d="M0 700 C 300 660, 700 740, 1600 680 L 1600 900 L 0 900 Z" fill="#5F736C"/>
+  <path d="M0 420 C 200 360, 360 400, 520 340 C 700 270, 820 330, 980 280 C 1160 220, 1320 300, 1600 240 L 1600 900 L 0 900 Z" fill="#C9D7C2"/>
+  <path d="M0 560 C 260 500, 480 580, 760 520 C 1040 460, 1260 540, 1600 500 L 1600 900 L 0 900 Z" fill="#C9D7C2"/>
+  <path d="M0 700 C 300 660, 700 740, 1600 680 L 1600 900 L 0 900 Z" fill="#4E6554"/>
 </svg>
